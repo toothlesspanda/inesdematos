@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import {
   Linkedin,
   Medium,
@@ -29,13 +30,13 @@ const Layout = ({ title, children }) => {
               variant="dark"
               style={{ justifyContent: "center" }}>
               <Nav>
-                <Nav.Link className={title === "Home" ? "active" : ""} href="/">
-                  Home
+                <Nav.Link className={title === "Home" ? "active" : ""}>
+                  <Link to={"/"}>Home</Link>
                 </Nav.Link>
                 <Nav.Link
                   className={title === "About" ? "active" : ""}
                   href="/about">
-                  About me
+                  <Link to={"/about"}>About me</Link>
                 </Nav.Link>
               </Nav>
             </Navbar>

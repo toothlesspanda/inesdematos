@@ -23,7 +23,7 @@ const About = ({}) => {
                   position: "relative",
                 }}
                 roundedCircle
-                src="profile.jpeg"></Figure.Image>
+                src="profile.png"></Figure.Image>
               <div
                 style={{
                   borderRadius: "50%",
@@ -50,17 +50,17 @@ const About = ({}) => {
               <Col>
                 <h3>Hi!</h3>
                 <p>
-                  I am a portuguese gal passionate about her work. I love topics
+                  I am a Portuguese gal passionate about her work. I love topics
                   around backend, good practices, developer experience,
-                  leadership and people's behaviour.
+                  leadership and people's behavior.
                   <br />
                   <br />
-                  I am a foodie and a sleeper. For hobbies I like to photograph,
-                  write, draw and explore new sports.
+                  I am a foodie and a sleeper. For hobbies, I like to
+                  photograph, write, draw and explore new sports.
                   <br />
                   <br />
-                  For tv shows I am obssessed with sci-fi content and I love to
-                  listen EDM and Indie Rock music.
+                  For tv shows, I am obsessed with sci-fi content and I love to
+                  listen to EDM and Indie Rock music.
                 </p>
               </Col>
             </Row>

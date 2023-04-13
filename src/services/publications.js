@@ -3,7 +3,7 @@ const getOptions = {
   mode: "no-cors",
 };
 
-const getMediumPublications = async () => {
+export const getMediumPublications = async () => {
   try {
     const publications = await fetch(
       "https://api.rss2json.com/v1/api.json?" +
@@ -24,7 +24,7 @@ const getMediumPublications = async () => {
   return;
 };
 
-const getInstagramPublications = async () => {
+export const getInstagramPublications = async () => {
   try {
     const res = await fetch("https://rss.app/feeds/v1.1/WJhKM8fDWIsTJEkE.json");
     const publications = (await res.json()).items;
@@ -33,9 +33,4 @@ const getInstagramPublications = async () => {
     console.log(err);
   }
   return;
-};
-
-module.exports = {
-  getMediumPublications,
-  getInstagramPublications,
 };

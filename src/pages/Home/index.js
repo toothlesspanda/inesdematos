@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Pagination } from "react-bootstrap";
 import Layout from "../Layout";
-import RSS from "../../services/publications";
-import PubCard from "../../components/PubCard";
+import {
+  getMediumPublications,
+  getInstagramPublications,
+} from "../../services/publications";
 
 const Home = ({}) => {
   const [publications, setPublications] = useState([]);
@@ -31,7 +33,7 @@ const Home = ({}) => {
     async function fetchMediumData() {
       // You can await here
       console.log("4. Fetching medium data ");
-      let mediumPublications = await RSS.getMediumPublications();
+      let mediumPublications = await getMediumPublications();
       let pubArray = [];
 
       for (let mdidx in mediumPublications) {
@@ -46,7 +48,7 @@ const Home = ({}) => {
         if (!(await publications.find((x) => x.link === tmp.link)))
           pubArray.push(tmp);
       }
-      let instaPub = await RSS.getInstagramPublications();
+      let instaPub = await getInstagramPublications();
 
       for (let mdidx in instaPub) {
         let tmp = {
